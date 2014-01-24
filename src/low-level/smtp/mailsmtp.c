@@ -917,8 +917,13 @@ int mailsmtp_auth_type(mailsmtp * session,
   
   switch (type) {
   case MAILSMTP_AUTH_LOGIN:
-    return mailesmtp_auth_sasl(session, "LOGIN",
-        hostname, NULL, NULL, user, user, pass, NULL);
+//    return mailesmtp_auth_sasl(session, "LOGIN",
+//        hostname, NULL, NULL, user, user, pass, NULL);
+//      
+      return mailesmtp_auth_sasl(session, "ALIMEILOGIN",
+                                 hostname, NULL, NULL, user, user, pass, NULL);
+      
+      //jiming.dongjm
     
   case MAILSMTP_AUTH_PLAIN:
     return mailesmtp_auth_sasl(session, "PLAIN",
