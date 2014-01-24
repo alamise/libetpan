@@ -1587,8 +1587,8 @@ int mailimap_login_send(mailstream * fd,
 {
   int r;
   
-  //r = mailimap_token_send(fd, "LOGIN");
-  r = mailimap_token_send(fd, "ALIMEILOGIN");//jiming.dongjm
+  r = mailimap_token_send(fd, "LOGIN");
+  //r = mailimap_token_send(fd, "ALIMEILOGIN");//jiming.dongjm
   if (r != MAILIMAP_NO_ERROR)
     return r;
 
